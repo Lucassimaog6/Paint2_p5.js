@@ -1,39 +1,22 @@
-let colorPicker;
+let colorPickerElem;
+let colorPickerValue;
 let p;
 let btn;
 let slider;
 let nav;
+let c;
+let canvasDiv;
+let canvasDivWidth;
+let canvasDivHeight;
+let rangePickerElem;
+let rangePickerValue;
 
 function setup() {
-    createCanvas(displayWidth, displayHeight);
-
-    colorPicker = createColorPicker('#000000');
-    colorPicker.position(5, 50);
-
-    p = createP("Escolha a cor do pincel aqui:")
-    p.style('font-size', '20px');
-    p.style('font-family', 'sans-serif');
-    p.position(5, 0);
-
-    p = createP("Clique 'S' para Salvar! ")
-    p.style('font-size', '20px');
-    p.style('font-family', 'sans-serif');
-    p.position(300, 0);   
-    
-    p = createP("Clique 'L' para Limpar! ")
-    p.style('font-size', '20px');
-    p.style('font-family', 'sans-serif');
-    p.position(600, 0);
-
-    p = createP("Deslize para mudar o tamanho do pincel: ")
-    p.style('font-size', '20px');
-    p.style('font-family', 'sans-serif');
-    p.position(900, 0);
-
-    slider = createSlider(1, 100, 10, 5)
-    slider.position(900, 50)
-    slider.style('width', '100px')
-
+    canvasDiv = document.querySelector("#canvasDiv")
+    canvasDivWidth = canvasDiv.offsetWidth;
+    canvasDivHeight = canvasDiv.offsetHeigh;
+    c = createCanvas(canvasDivWidth, windowHeight*0.75);
+    c.parent('canvasDiv')
 
     background(255,255,255);
 }
@@ -41,19 +24,30 @@ function setup() {
 function salvar() {
     saveCanvas('Meu_desenho'+str(random(0, 1000)), 'jpg');
 }
+function limpar() {
+    background(255,255,255);
+}
 
 function draw() {  
-    if(mouseIsPressed == true && mouseY > 80){
-        stroke(colorPicker.color());
-        strokeWeight(slider.value())
+
+    colorPickerElem = document.querySelector("#colorPicker")
+    colorPickerValue = colorPickerElem.value
+
+    rangePickerElem = document.querySelector("#rangePicker")
+    rangePickerValue = rangePickerElem.value
+    rangePickerValue = map(rangePickerValue, 0, 100, 1, 150)
+
+    if(mouseIsPressed == true){
+        stroke(colorPickerValue);
+        strokeWeight(rangePickerValue)
         line(mouseX, mouseY, pmouseX, pmouseY)
     }
     
 }
 function keyPressed() {
     if (keyCode == 83) {
-      salvar();
+        salvar();
     }else if(keyCode == 76){
-        background(255,255,255)
+        limpar();
     }
 }

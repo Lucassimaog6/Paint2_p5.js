@@ -1,4 +1,19 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    font-family: monospace;
+}
 body{
-    margin: 0;
-    padding: 0;
+    text-align: center;
+    font-size: 40px;
+    background-color: #dddddd;
+}
+header{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    font-size: 20px;
+}
+#canvasDiv{
+    width: 100vw;
 }
