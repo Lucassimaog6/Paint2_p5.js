@@ -1,26 +1,15 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-
-    <script src="https://cdn.jsdelivr.net/npm/p5@1.4.1/lib/p5.js"></script>
-    <script src="script.js"></script>
-
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <title>Paint 2</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.js"></script>
+  <title>Paint JS</title>
 </head>
 <body>
-    <h1>Paint 2</h1>
-    <header>
-        <p onclick="salvar()">Pressione "S", ou clique aqui para salvar!</p>
-        <p>Escolha a cor, e o tamanho do pincél aqui:</p>
-        <p onclick="limpar()">Pressione "L", ou clique aqui para limpar!</p>
-    </header>
-        <input type="color" name="color" id="colorPicker">
-        <input type="range" name="range" id="rangePicker" value="10">
-
-    <div id="canvasDiv"></div>
+  <div id="canvas"></div>
 </body>
 </html>
