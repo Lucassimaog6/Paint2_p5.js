@@ -20,8 +20,8 @@ body {
 #mobile{
   background: #aaa;
   width: 90vw;
-  height: 15vh;
-  margin: 5vh auto;
+  height: 12vh;
+  margin: 3vh auto;
   border-radius: 10px;
   display: flex;
   flex-direction: row;
@@ -51,7 +51,7 @@ body {
 
 #canvas {
   width: 90vw;
-  height: 70vh;
+  height: 70%;
   overflow: hidden;
   border-radius: 10px;
 }
