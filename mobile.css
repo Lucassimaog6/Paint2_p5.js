@@ -20,13 +20,13 @@ body {
 #mobile{
   background: #aaa;
   width: 90vw;
-  height: 12vh;
-  margin: 3vh auto;
+  height: 10vh;
   border-radius: 10px;
   display: flex;
   flex-direction: row;
   justify-content: space-around;
   align-items: center;
+  padding: 10px;
 }
 #btns{
   display: flex;
