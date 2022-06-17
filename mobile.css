@@ -21,18 +21,19 @@ body {
 #mobile{
   background: #aaa;
   width: 90vw;
-  height: 12vh;
-  margin: 3vh;
+  height: 15vh;
+  margin: 5vh auto;
   border-radius: 10px;
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
   align-items: center;
+  justify-content: space-around;
 }
 #btns{
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
+  border: solid;
 }
 #btns>div{
   width: 5vh;
@@ -45,9 +46,10 @@ body {
   align-items: center;  
 }
 #txts{
+  text-align: center;
+  line-height: 1;
   font-size: 3vw;
   text-align: center;
-  line-height: 1.2;
 }
 
 #canvas {

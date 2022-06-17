@@ -45,7 +45,7 @@ if (mq.matches) {
     let canvas = document.getElementById("canvas");
     let canvasW = canvas.offsetWidth;
     let canvasH = canvas.offsetHeight;
-    let c = createCanvas(canvasW, canvasH + 100);
+    let c = createCanvas(canvasW, canvasH + 70);
     c.parent("canvas");
     background(255, 255, 255);
   }
